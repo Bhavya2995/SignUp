@@ -98,6 +98,9 @@ class Form extends Component{
   render(){
     const {errors,data,success,value} = this.state;
     return(
+      <div className = "container">
+      <div className = "row">
+      <div className = "col-sm-6 offset-sm-3">
       <MuiThemeProvider>
 
     {(!success)?  (<React.Fragment>
@@ -178,6 +181,9 @@ class Form extends Component{
         :(<UserDetails data = {data} profession = {value}/> ) }
 
       </MuiThemeProvider>
+      </div>
+      </div>
+      </div>
     );
   }
 

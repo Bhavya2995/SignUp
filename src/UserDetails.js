@@ -24,11 +24,14 @@ export const UserDetails = ({data,profession}) =>{
   }
   return(
     <div>
+    <h1 className = "display-4">User Details</h1>
+    <div className = "lead">
       First Name :{data.fname} <br />
       Last Name :{data.lname} <br />
       Email :{data.email} <br />
       Gender : {data.gender} <br />
       Profession : {displayProfession()}<br />
+      </div>
     </div>
   );
 }
