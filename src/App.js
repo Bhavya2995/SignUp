@@ -99,7 +99,9 @@ class Form extends Component{
     const {errors,data,success,value} = this.state;
     return(
       <MuiThemeProvider>
-        <TextField
+
+    {(!success)?  (<React.Fragment>
+       <TextField
         name = "fname"
         floatingLabelText = "Enter your First Name"
         floatingLabelFixed={true}
@@ -164,13 +166,16 @@ class Form extends Component{
             <MenuItem value = {2} primaryText = "Govt. Official" />
             <MenuItem value = {3} primaryText = "Self Employed" />
             <MenuItem value = {4} primaryText = "Private" />
+            <MenuItem value = {5} primaryText = "Others" />
 
         </SelectField>
         <br/>
 
         <FlatButton label = "Submit" primary = {true} onClick = {this.handleSubmit}/>
+        </React.Fragment>
+      )
 
-        {(success)? <UserDetails data = {data} profession = {value}/> : null}
+        :(<UserDetails data = {data} profession = {value}/> ) }
 
       </MuiThemeProvider>
     );

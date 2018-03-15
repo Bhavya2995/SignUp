@@ -1,6 +1,6 @@
 import React from 'react';
 
-const UserDetails = ({data,profession}) =>{
+export const UserDetails = ({data,profession}) =>{
   const displayProfession = () =>{
     switch (profession) {
       case 1:
@@ -13,6 +13,9 @@ const UserDetails = ({data,profession}) =>{
         return "Self Employed"
         break;
       case 4:
+        return "Private"
+        break;
+      case 5:
         return "Private"
         break;
       default:
